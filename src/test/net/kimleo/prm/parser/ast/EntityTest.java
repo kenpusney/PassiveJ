@@ -1,6 +1,6 @@
 package net.kimleo.prm.parser.ast;
 
-import net.kimleo.prm.components.DefaultDriver;
+import net.kimleo.prm.components.sql.DefaultDriver;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,6 +1,7 @@
 package net.kimleo.prm.parser.ast;
 
-import net.kimleo.prm.components.*;
+import net.kimleo.prm.components.EntityStructure;
+import net.kimleo.prm.components.sql.Driver;
 
 /**
  * Created by Kim on 2014/6/1.
@@ -35,6 +36,11 @@ public class Entity implements Element {
         StringBuffer sql = new StringBuffer("create table ").append(identifier.repr).append(" (\n");
         sql.append(entity.generate(driver)).append(");\n");
         return sql.toString();
+    }
+
+    @Override
+    public String keyword() {
+        return KEYWORD[0];
     }
 
     @Override
