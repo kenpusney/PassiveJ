@@ -10,8 +10,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Parser {
-    final static List<Object> ast = new LinkedList<>();
-    public static void parse(String source) {
+    final List<Object> ast = new LinkedList<>();
+    public Parser(){}
+    public void parse(String source) {
         int index = 0;
         while(true){
             Character.isSpaceChar(0);
@@ -37,7 +38,7 @@ public class Parser {
 //            System.out.println(o);
     }
 
-    private static int findNextBlank(String source, int index) {
+    private int findNextBlank(String source, int index) {
         char BLANKS[] = {'\n', '\r', '\t', ' '};
         int min = index;
         for(char c:BLANKS){
@@ -48,7 +49,7 @@ public class Parser {
         return min;
     }
 
-    private static boolean isBlank(char c) {
+    private boolean isBlank(char c) {
         return c == '\t' || c == '\n' || c == '\r' || c == ' ';
     }
 }

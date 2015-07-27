@@ -11,7 +11,6 @@ import java.util.List;
 public class EntityStructure {
     final Attribute id = new Attribute(Types.INTEGER, "id", this);
     List<Attribute> attributes = new LinkedList<>();
-    List<Constraint> constraints = new LinkedList<>();
 
     public EntityStructure() {
     }
@@ -20,9 +19,6 @@ public class EntityStructure {
         attributes.add(attr);
     }
 
-    public void pushConstraint(Constraint constraint){
-        constraints.add(constraint);
-    }
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("EntityStructure{");
@@ -32,9 +28,7 @@ public class EntityStructure {
             sb.append(attr).append("; ");
         }
         sb.append("}, constraints={");
-        for (Constraint constraint:constraints){
-            sb.append(constraint).append("; ");
-        }
+
         sb.append("}, }");
         return sb.toString();
     }
