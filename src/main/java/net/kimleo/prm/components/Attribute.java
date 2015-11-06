@@ -5,17 +5,14 @@ import net.kimleo.prm.components.constraints.Constraint;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by Kim on 2014/5/30.
- */
-public class Attribute {
+public class Attribute implements Component {
     public final Types types;
     public final String repr;
-    public final EntityStructure belongs;
+    public final Entity belongs;
 
     List<Constraint> constraints = new LinkedList<>();
 
-    public Attribute(Types types, String repr, EntityStructure belongs) {
+    public Attribute(Types types, String repr, Entity belongs) {
         this.types = types;
         this.repr = repr;
         this.belongs = belongs;
@@ -28,18 +25,14 @@ public class Attribute {
 
         Attribute attribute = (Attribute) o;
 
-        if (!belongs.equals(attribute.belongs)) return false;
-        if (!repr.equals(attribute.repr)) return false;
-        if (types != attribute.types) return false;
+        return repr.equals(attribute.repr) && types == attribute.types;
 
-        return true;
     }
 
     @Override
     public int hashCode() {
         int result = types.hashCode();
         result = 31 * result + repr.hashCode();
-        result = 31 * result + belongs.hashCode();
         return result;
     }
 
@@ -49,7 +42,7 @@ public class Attribute {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Attribute{");
+        final StringBuilder sb = new StringBuilder("Attribute{");
         sb.append("types=").append(types);
         sb.append(", repr='").append(repr).append('\'');
         if(!constraints.isEmpty()) {

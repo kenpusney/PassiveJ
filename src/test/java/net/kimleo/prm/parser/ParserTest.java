@@ -13,7 +13,7 @@ public class ParserTest {
         assertEquals(parser.ast.get(1).toString(),
                 "Entity{" +
                         "identifier=class, " +
-                        "entity=EntityStructure{" +
+                        "entity=Entity{" +
                         "id=id:INTEGER, " +
                         "attributes={" +
                         "Attribute{types=STRING, repr='title'}; " +
@@ -22,7 +22,6 @@ public class ParserTest {
                         "constraints={}, " +
                         "}" +
                         "}");
-        System.out.println(parser.ast.get(0));
     }
 
 }

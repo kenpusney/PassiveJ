@@ -2,7 +2,7 @@ package net.kimleo.prm.components;
 
 import org.junit.Test;
 
-public class EntityStructureTest {
+public class EntityTest {
     @Test
     public void test() throws Exception {
     }

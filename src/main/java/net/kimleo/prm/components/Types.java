@@ -1,8 +1,5 @@
 package net.kimleo.prm.components;
 
-/**
- * Created by Kim on 2014/5/30.
- */
 public enum Types {
     INTEGER,
     NUMBER,

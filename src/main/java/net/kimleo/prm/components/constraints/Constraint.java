@@ -1,14 +1,13 @@
 package net.kimleo.prm.components.constraints;
 
-import java.util.Arrays;
+import net.kimleo.prm.components.Component;
+
+import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by qkliu on 7/27/15.
- */
-public class Constraint {
-    final Constraints type;
-    final String expr;
+public class Constraint implements Component {
+    public final Constraints type;
+    public final String expr;
 
     public Constraint(Constraints type, String expr) {
         this.type = type;
@@ -20,7 +19,7 @@ public class Constraint {
     }
 
     public static List<Constraint> build(String constraint) {
-        return Arrays.asList(new Constraint(Constraints.NOT_NULL));
+        return Collections.singletonList(new Constraint(Constraints.NOT_NULL));
     }
 
     @Override
