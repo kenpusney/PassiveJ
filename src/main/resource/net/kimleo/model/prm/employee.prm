@@ -1,0 +1,23 @@
+
+entity employee {
+    name:char[60]
+    age:char[20]
+    manager:manager
+}
+
+entity manager:employee{
+    @PK[position,department]
+    position:position
+    department:department
+}
+
+entity department{
+    name!:char[60]
+    base:department
+}
+
+enum position{
+    advanced,
+    senior,
+    ...
+}

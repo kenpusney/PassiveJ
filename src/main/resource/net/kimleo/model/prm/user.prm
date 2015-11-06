@@ -1,0 +1,7 @@
+
+entity user {
+    name:char[60]
+    age:number => 0 < _ < 100
+    address:char[120]
+    description:text
+}
