@@ -1,0 +1,12 @@
+type shit;
+
+entity fuck {
+    name: string!;
+    id: integer primary check(notnull);
+    department: shit;
+    intros: text? default(helloworld)
+}
+
+function fucked() {
+    query fuck.name[notnull(sizeof(name))] | //fuck.id | \\department ;
+}

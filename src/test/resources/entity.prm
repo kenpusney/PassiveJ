@@ -1,0 +1,4 @@
+entity employee {
+   name: string;
+   age: integer
+}
