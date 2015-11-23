@@ -1,6 +1,6 @@
 package net.kimleo.model.generator.sql;
 
-import net.kimleo.model.components.Entity;
+import net.kimleo.model.component.Entity;
 import org.junit.Test;
 
 public class DriverTest {

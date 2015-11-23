@@ -1,4 +1,4 @@
-package net.kimleo.model.components;
+package net.kimleo.model.component;
 
 import org.junit.Test;
 

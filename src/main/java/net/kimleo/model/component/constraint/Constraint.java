@@ -1,25 +1,25 @@
-package net.kimleo.model.components.constraints;
+package net.kimleo.model.component.constraint;
 
-import net.kimleo.model.components.Component;
+import net.kimleo.model.component.Component;
 
 import java.util.Collections;
 import java.util.List;
 
 public class Constraint implements Component {
-    public final Constraints type;
+    public final ConstraintType type;
     public final String expr;
 
-    public Constraint(Constraints type, String expr) {
+    public Constraint(ConstraintType type, String expr) {
         this.type = type;
         this.expr = expr;
     }
 
-    public Constraint(Constraints type) {
+    public Constraint(ConstraintType type) {
         this(type, "");
     }
 
     public static List<Constraint> build(String constraint) {
-        return Collections.singletonList(new Constraint(Constraints.NOT_NULL));
+        return Collections.singletonList(new Constraint(ConstraintType.NOT_NULL));
     }
 
     @Override

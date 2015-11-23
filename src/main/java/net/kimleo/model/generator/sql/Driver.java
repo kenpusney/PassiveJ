@@ -1,6 +1,6 @@
 package net.kimleo.model.generator.sql;
 
-import net.kimleo.model.components.Component;
+import net.kimleo.model.component.Component;
 import net.kimleo.model.generator.Generator;
 
 import java.lang.reflect.InvocationTargetException;

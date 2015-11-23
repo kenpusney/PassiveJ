@@ -1,6 +1,6 @@
 package net.kimleo.model.parser.prm;
 
-import net.kimleo.model.components.Entity;
+import net.kimleo.model.component.Entity;
 import net.kimleo.model.generator.Generator;
 
 import static java.lang.String.format;

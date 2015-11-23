@@ -1,7 +1,7 @@
 .idea/
 *.iml
 target/
-
+.DS_Store
 src/main/java/net/kimleo/App.java
 build/
 out/

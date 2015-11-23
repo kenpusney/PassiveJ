@@ -1,6 +1,6 @@
-package net.kimleo.model.components;
+package net.kimleo.model.component;
 
-import net.kimleo.model.components.constraints.Constraint;
+import net.kimleo.model.component.constraint.Constraint;
 
 import java.util.LinkedList;
 import java.util.List;
