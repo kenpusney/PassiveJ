@@ -9,7 +9,7 @@ repositories {
 }
 
 generateGrammarSource {
-    outputDirectory = file("gen")
+    outputDirectory = file("src/main/gen/net/kimleo/lang/passive")
 }
 
 dependencies {

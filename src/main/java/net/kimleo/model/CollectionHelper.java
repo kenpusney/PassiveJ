@@ -1,8 +1,6 @@
 package net.kimleo.model;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class CollectionHelper {
     @SafeVarargs
@@ -11,4 +9,12 @@ public class CollectionHelper {
         Collections.addAll(set, ts);
         return set;
     }
+
+    @SafeVarargs
+    public static <T> List<T> listOf(T... accept) {
+        List<T> ts = new ArrayList<>();
+        Collections.addAll(ts, accept);
+        return ts;
+    }
+
 }

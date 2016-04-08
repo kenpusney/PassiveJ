@@ -1,5 +1,9 @@
 grammar PassiveRecord;
 
+@header {
+package net.kimleo.lang.passive;
+}
+
 model: (entity | relation | query | function | view | type)+;
 
 entity : ENTITY name? record;

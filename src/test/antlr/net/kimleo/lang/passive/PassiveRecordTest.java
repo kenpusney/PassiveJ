@@ -1,6 +1,6 @@
 package net.kimleo.lang.passive;
 
-import net.kimleo.lang.PassiveRecord;
+import net.kimleo.model.component.Component;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.TerminalNode;
 import org.junit.After;
@@ -11,7 +11,6 @@ import java.util.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertNull;
 
 public class PassiveRecordTest {
 
@@ -46,6 +45,8 @@ public class PassiveRecordTest {
         PassiveRecordParser.FunctionContext first = model.function(0);
         PassiveRecordParser.FunctionContext second = model.function(1);
 
+        Component accept = model.accept(new ConcretePassiveRecordVisitor());
+
         assertThat(value(first.FUNCTION()), is("function"));
         assertThat(value(second.FUNCTION()), is("function"));
         assertThat(value(first.name().ID()), is("id"));
@@ -61,6 +62,9 @@ public class PassiveRecordTest {
         PassiveRecordParser parse = parse(file);
 
         PassiveRecordParser.ModelContext model = parse.model();
+
+        Component accept = model.accept(new ConcretePassiveRecordVisitor());
+
 
         assertThat(errorCount, is(0));
     }
